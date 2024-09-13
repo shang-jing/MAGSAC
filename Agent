@@ -2,9 +2,8 @@ from torch import Tensor
 from torch.autograd import Variable
 from torch.optim import Adam
 from utils.misc import hard_update, gumbel_softmax, onehot_from_logits
-from utils.policies import DiscretePolicy, PlasticPolicy
 
-class PlasticAgent(object):
+class Agent(object):
 
     def __init__(self, nagents,num_in_pol, num_out_pol,action_space, hidden_dim=64,
                  lr=0.01, attend_heads=4, onehot_dim=0):
